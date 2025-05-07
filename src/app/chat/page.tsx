@@ -36,7 +36,7 @@ export default function ChatPage() {
   return (
     <div className="p-4 max-w-xl mx-auto">
       <h1 className="text-xl mb-4">Chat Room</h1>
-      <div className="border p-4 h-96 overflow-y-scroll mb-4 bg-gray-50">
+      <div className="border p-4 h-96 overflow-y-scroll mb-4 bg-sky-700">
         {messages.map((msg) => (
           <div key={msg.id} className="mb-2">
             <strong>{msg.sender_id}</strong>: {msg.content}
