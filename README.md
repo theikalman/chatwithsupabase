@@ -19,7 +19,7 @@ First, we need to run supabase locally, this is done thru docker.
 
 `npx supabase start`
 
-The supabase UI can be accessed at: `https://localhost:54323`
+The supabase UI can be accessed at: `http://127.0.0.1:54323`
 
 ### Run NextJS Server
 
