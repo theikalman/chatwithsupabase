@@ -3,6 +3,8 @@
 This is a chat app to demonstrate how to use Supabase as a Backend. The frontend is using
 NextJS with Tailwind.
 
+The demo is available here: [Screen Record Demo v0.0.1](https://youtu.be/xP-xknSNnF4)
+
 ## Prerequisites
 
 - npm (nodejs)
