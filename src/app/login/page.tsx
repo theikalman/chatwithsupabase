@@ -20,14 +20,39 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="p-8 max-w-sm mx-auto">
-      <h1 className="text-xl mb-4">{isSignUp ? 'Sign Up' : 'Log In'}</h1>
-      <input className="input" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input className="input mt-2" type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button className="btn mt-4 w-full" onClick={handleAuth}>{isSignUp ? 'Sign Up' : 'Log In'}</button>
-      <p className="mt-2 text-sm cursor-pointer" onClick={() => setIsSignUp(!isSignUp)}>
-        {isSignUp ? 'Already have an account? Log in' : "Don't have an account? Sign up"}
-      </p>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300">
+      <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
+        <h2 className="text-3xl font-semibold text-blue-600 text-center mb-6">Login</h2>
+        <form className="space-y-5">
+          <div>
+            <label className="block text-sm font-medium text-blue-700 mb-1">Email</label>
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-2 border border-blue-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-blue-700 mb-1">Password</label>
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-2 border border-blue-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <button
+            type="submit"
+            onClick={handleAuth}
+            className="w-full bg-blue-700 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
+          >
+            Sign In
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
